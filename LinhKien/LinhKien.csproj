@@ -70,8 +70,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BanHang.mdf" />
+    <Content Include="App_Data\BanHang_log.ldf">
+      <DependentUpon>BanHang.mdf</DependentUpon>
+    </Content>
+    <Content Include="CheDoBaoHanh.aspx" />
+    <Content Include="ChiTiet.aspx" />
     <Content Include="foxmenu_bg-OFF.gif" />
     <Content Include="foxmenu_bg-OVER.gif" />
+    <Content Include="GioHang.aspx" />
+    <Content Include="HinhThucThanhToan.aspx" />
     <Content Include="images\templatemo_bg.jpg" />
     <Content Include="images\templatemo_btn_01.jpg" />
     <Content Include="images\templatemo_btn_02.jpg" />
@@ -85,10 +93,41 @@
     <Content Include="images\templatemo_image_04.jpg" />
     <Content Include="images\templatemo_menu_bg.jpg" />
     <Content Include="index.aspx" />
+    <Content Include="LienHe.aspx" />
     <Content Include="templatemo_style.css" />
+    <Content Include="ThanhToan.aspx" />
+    <Content Include="TimSanPham.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheDoBaoHanh.aspx.cs">
+      <DependentUpon>CheDoBaoHanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheDoBaoHanh.aspx.designer.cs">
+      <DependentUpon>CheDoBaoHanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet.aspx.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChiTiet.aspx.designer.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GioHang.aspx.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioHang.aspx.designer.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HinhThucThanhToan.aspx.cs">
+      <DependentUpon>HinhThucThanhToan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HinhThucThanhToan.aspx.designer.cs">
+      <DependentUpon>HinhThucThanhToan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,7 +135,28 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LienHe.aspx.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LienHe.aspx.designer.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThanhToan.aspx.cs">
+      <DependentUpon>ThanhToan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThanhToan.aspx.designer.cs">
+      <DependentUpon>ThanhToan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimSanPham.aspx.cs">
+      <DependentUpon>TimSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimSanPham.aspx.designer.cs">
+      <DependentUpon>TimSanPham.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View.Master.cs">
       <DependentUpon>View.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
