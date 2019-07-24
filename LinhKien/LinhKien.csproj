@@ -80,6 +80,7 @@
     <Content Include="foxmenu_bg-OVER.gif" />
     <Content Include="GioHang.aspx" />
     <Content Include="HinhThucThanhToan.aspx" />
+    <Content Include="images\background.png" />
     <Content Include="images\templatemo_bg.jpg" />
     <Content Include="images\templatemo_btn_01.jpg" />
     <Content Include="images\templatemo_btn_02.jpg" />
