@@ -11,7 +11,16 @@ namespace LinhKien
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!Page.IsPostBack)
+            {
+                LoadDanhMuc();
+            }
+        }
+        private void LoadDanhMuc()
+        {
+            TruyVanLayDuLieu dao = new TruyVanLayDuLieu();
+            dataDanhMuc.DataSource = dao.Laydulieu("DanhMuc_Select");
+            dataDanhMuc.DataBind();
         }
     }
 }

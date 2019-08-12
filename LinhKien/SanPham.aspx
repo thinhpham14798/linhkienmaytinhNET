@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="LinhKien.index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View.Master" AutoEventWireup="true" CodeBehind="SanPham.aspx.cs" Inherits="LinhKien.SanPham" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="templatemo_content_right">
-        <h1>SẢN PHẨM MỚI<div style="float: right"><a href="SanPham.aspx"><span>Xem tất cả</span></a></div></></h1>
+        <h1>TẤT CẢ SẢN PHẨM</h1>
         <hr />
         <asp:DataList ID="dataSanPham" runat="server" RepeatColumns="2" RepeatDirection="Horizontal">
             <ItemTemplate>

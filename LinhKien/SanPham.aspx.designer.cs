@@ -10,7 +10,7 @@
 namespace LinhKien {
     
     
-    public partial class index {
+    public partial class SanPham {
         
         /// <summary>
         /// dataSanPham control.
