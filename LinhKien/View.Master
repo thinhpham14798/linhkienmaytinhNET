@@ -15,12 +15,12 @@
     <form id="form1" runat="server">
     <div id="templatemo_menu">
             <ul>
-                <li><a href="index.html" class="current">TRANG CHỦ</a></li>
-                <li><a href="subpage.html">TÌM KIẾM</a></li>
-                <li><a href="subpage.html">CHẾ ĐỘ BẢO HÀNH</a></li>
-                <li><a href="subpage.html">HÌNH THỨC THANH TOÁN</a></li>
+                <li><a href="index.aspx" class="current">TRANG CHỦ</a></li>
+                <li><a href="TimSanPham.aspx">TÌM KIẾM</a></li>
+                <li><a href="CheDoBaoHanh.aspx">CHẾ ĐỘ BẢO HÀNH</a></li>
+                <li><a href="HinhThucThanhToan.aspx">HÌNH THỨC THANH TOÁN</a></li>
                 <li><a href="#">LIÊN HỆ</a></li>
-                <li style="float: right"><a href="giohang.aspx">Giỏ hàng (0 Sản phẩm)</a></li>
+                <li style="float: right"><a href="GioHang.aspx">Giỏ hàng</a></li>
             </ul>
         </div>
     <div id="templatemo_container">
@@ -43,12 +43,7 @@
                         </asp:DataList>
                     </ul>
                 </div>
-                <div class="templatemo_content_left_section">
-                    <h1>SẢN PHẨM BÁN CHẠY</h1>
-                    <ul>
-                        
-                    </ul>
-                </div>
+                
 
                 <div class="templatemo_content_left_section">
                     <a href="http://validator.w3.org/check?uri=referer">

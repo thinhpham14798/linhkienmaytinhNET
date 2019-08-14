@@ -11,14 +11,14 @@
                     <h1>
                         <span><asp:Label ID="Label1" runat="server" Text='<%# Eval("TenSanPham") %>'></asp:Label></span>
                     </h1>
-                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("HinhAnh") %>' Width="100px"  Height="150px"/>
+                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# "~/images/"+Eval("HinhAnh") %>' Width="100px"  Height="150px"/>
                     <div class="product_info">
                         <p>
                             <asp:Label ID="Label2" runat="server" Text='<%# Eval("MoTa") %>'></asp:Label></p>
                         <h3>
                             <asp:Label ID="Label3" runat="server" Text='<%# Eval("Gia")+"đ" %>'></asp:Label></h3>
                         <div class="buy_now_button">
-                            <a href='<%# "ThanhToan.aspx?add="+Eval("MaSanPham") %>'>Mua ngay</a></div>
+                            <a href='<%# "GioHang.aspx?ProID="+Eval("MaSanPham") %>'>Thêm vào giỏ</a></div>
                         <div class="detail_button">
                             <a href='<%# "ChiTietSanPham.aspx?id="+Eval("MaSanPham") %>'>Xem chi tiết</a></div>
                     </div>

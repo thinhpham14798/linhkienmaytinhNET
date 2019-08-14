@@ -70,18 +70,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\del.png" />
+    <Content Include="admin\edit.png" />
+    <Content Include="admin\index.aspx" />
+    <Content Include="admin\login.aspx" />
+    <Content Include="admin\menu_home.png" />
+    <Content Include="admin\np.gif" />
+    <Content Include="admin\qlchuyenmuc.aspx" />
+    <Content Include="admin\style.css" />
+    <Content Include="admin\suachuyenmuc.aspx" />
+    <Content Include="admin\themchuyenmuc.aspx" />
     <Content Include="App_Data\BanHang.mdf" />
     <Content Include="App_Data\BanHang_log.ldf">
       <DependentUpon>BanHang.mdf</DependentUpon>
     </Content>
+    <Content Include="Category.aspx" />
     <Content Include="CheDoBaoHanh.aspx" />
     <Content Include="ChiTiet.aspx" />
     <Content Include="ChiTietSanPham.aspx" />
     <Content Include="foxmenu_bg-OFF.gif" />
     <Content Include="foxmenu_bg-OVER.gif" />
     <Content Include="GioHang.aspx" />
+    <Content Include="GioHangRong.aspx" />
     <Content Include="HinhThucThanhToan.aspx" />
     <Content Include="images\background.png" />
+    <Content Include="images\corei9.jpg" />
     <Content Include="images\templatemo_bg.jpg" />
     <Content Include="images\templatemo_btn_01.jpg" />
     <Content Include="images\templatemo_btn_02.jpg" />
@@ -106,9 +119,60 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\BusinessLogic\DanhMucDAO.cs" />
+    <Compile Include="admin\BusinessLogic\DonHangDAO.cs" />
     <Compile Include="admin\Common\DanhMuc.cs" />
+    <Compile Include="admin\Common\DonHang.cs" />
     <Compile Include="admin\DataAccess\KetNoiCSDL.cs" />
     <Compile Include="admin\DataAccess\TruyVanLayDuLieu.cs" />
+    <Compile Include="admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\qlchuyenmuc.aspx.cs">
+      <DependentUpon>qlchuyenmuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\qlchuyenmuc.aspx.designer.cs">
+      <DependentUpon>qlchuyenmuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\suachuyenmuc.aspx.cs">
+      <DependentUpon>suachuyenmuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\suachuyenmuc.aspx.designer.cs">
+      <DependentUpon>suachuyenmuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\themchuyenmuc.aspx.cs">
+      <DependentUpon>themchuyenmuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\themchuyenmuc.aspx.designer.cs">
+      <DependentUpon>themchuyenmuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ViewAdmin.Master.cs">
+      <DependentUpon>ViewAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ViewAdmin.Master.designer.cs">
+      <DependentUpon>ViewAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CheDoBaoHanh.aspx.cs">
       <DependentUpon>CheDoBaoHanh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,6 +200,13 @@
     </Compile>
     <Compile Include="GioHang.aspx.designer.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GioHangRong.aspx.cs">
+      <DependentUpon>GioHangRong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioHangRong.aspx.designer.cs">
+      <DependentUpon>GioHangRong.aspx</DependentUpon>
     </Compile>
     <Compile Include="HinhThucThanhToan.aspx.cs">
       <DependentUpon>HinhThucThanhToan.aspx</DependentUpon>
@@ -189,12 +260,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\ViewAdmin.Master" />
     <None Include="packages.config" />
     <Content Include="View.Master" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

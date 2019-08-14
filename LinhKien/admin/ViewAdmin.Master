@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ViewAdmin.master.cs" Inherits="LinhKien.admin.ViewAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Quản lý website</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+    <div class="forum">
+        <div class="main index">
+            <div id="menu">
+                <table cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td width="65" class="active"><a href="index.aspx" rel="nofollow" target="_blank">Trang chủ</a></td>
+                            <td width="125"><a href="qldonhang.aspx">Quản lý đơn hàng</a></td>
+                            <td width="125"><a href="qlsanpham.aspx">Quản lý sản phẩm</a></td>
+                            <td width="125"><a href="qlchuyenmuc.aspx">Quản lý chuyên mục</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="maintxt">
+        <div class="tmn">
+            Xin chào, <font color="red">Quản trị viên</font>, chúc ngày mới vui vẻ :))<br>
+        </div>
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+    <div class="fmenu">
+        <div>
+            <a href="/index.aspx">
+                <img src="menu_home.png" alt="" class="icon">Trang chủ</a>
+        </div>
+    </div>
+    <div class="foot">
+        <a href="ư"><b>Quản lý website: Linh Kiện Máy Tính</b></a><br>
+        <b>Developer</b>: <a href="" target="_blank" rel="nofollow">Phạm Công Thịnh</a><br>
+        Trang web còn đang phát triển thêm, cảm ơn các bạn!
+    </div>
+</body>
+</html>

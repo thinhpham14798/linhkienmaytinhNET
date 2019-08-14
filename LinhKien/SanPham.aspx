@@ -11,7 +11,7 @@
                     <h1>
                         <span><asp:Label ID="Label1" runat="server" Text='<%# Eval("TenSanPham") %>'></asp:Label></span>
                     </h1>
-                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("HinhAnh") %>' Width="100px"  Height="150px"/>
+                    <asp:Image ID="Image1" runat="server" ImageUrl='<%#"~/images/"+Eval("HinhAnh") %>' Width="100px"  Height="150px"/>
                     <div class="product_info">
                         <p>
                             <asp:Label ID="Label2" runat="server" Text='<%# Eval("MoTa") %>'></asp:Label></p>
