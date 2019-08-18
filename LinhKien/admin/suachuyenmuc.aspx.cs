@@ -12,7 +12,7 @@ namespace LinhKien.admin
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["id"] == null)
-                Response.Write("qldchuyenmuc.aspx");
+                Response.Write("qlchuyenmuc.aspx");
             if (!this.IsPostBack)
             {
                 LoadDuLieu();

@@ -77,9 +77,14 @@
     <Content Include="admin\menu_home.png" />
     <Content Include="admin\np.gif" />
     <Content Include="admin\qlchuyenmuc.aspx" />
+    <Content Include="admin\qldonhang.aspx" />
+    <Content Include="admin\qlsanpham.aspx" />
     <Content Include="admin\style.css" />
     <Content Include="admin\suachuyenmuc.aspx" />
+    <Content Include="admin\suadonhang.aspx" />
+    <Content Include="admin\suasanpham.aspx" />
     <Content Include="admin\themchuyenmuc.aspx" />
+    <Content Include="admin\themsanpham.aspx" />
     <Content Include="App_Data\BanHang.mdf" />
     <Content Include="App_Data\BanHang_log.ldf">
       <DependentUpon>BanHang.mdf</DependentUpon>
@@ -93,20 +98,18 @@
     <Content Include="GioHang.aspx" />
     <Content Include="GioHangRong.aspx" />
     <Content Include="HinhThucThanhToan.aspx" />
+    <Content Include="images\2018092715482089_big.png" />
+    <Content Include="images\A320M-HDV%28L1%29.png" />
     <Content Include="images\background.png" />
     <Content Include="images\corei9.jpg" />
+    <Content Include="images\EX-A320M-Gaming_BOX.png" />
     <Content Include="images\templatemo_bg.jpg" />
     <Content Include="images\templatemo_btn_01.jpg" />
     <Content Include="images\templatemo_btn_02.jpg" />
     <Content Include="images\templatemo_footer_bg.jpg" />
     <Content Include="images\templatemo_h1_bg.jpg" />
-    <Content Include="images\templatemo_header_bg.jpg" />
-    <Content Include="images\templatemo_header_bg_blank.jpg" />
-    <Content Include="images\templatemo_image_01.jpg" />
-    <Content Include="images\templatemo_image_02.jpg" />
-    <Content Include="images\templatemo_image_03.jpg" />
-    <Content Include="images\templatemo_image_04.jpg" />
     <Content Include="images\templatemo_menu_bg.jpg" />
+    <Content Include="images\veng_k_web_4.png" />
     <Content Include="index.aspx" />
     <Content Include="LienHe.aspx" />
     <Content Include="SanPham.aspx" />
@@ -120,8 +123,10 @@
   <ItemGroup>
     <Compile Include="admin\BusinessLogic\DanhMucDAO.cs" />
     <Compile Include="admin\BusinessLogic\DonHangDAO.cs" />
+    <Compile Include="admin\BusinessLogic\SanPhamDAO.cs" />
     <Compile Include="admin\Common\DanhMuc.cs" />
     <Compile Include="admin\Common\DonHang.cs" />
+    <Compile Include="admin\Common\sanpham.cs" />
     <Compile Include="admin\DataAccess\KetNoiCSDL.cs" />
     <Compile Include="admin\DataAccess\TruyVanLayDuLieu.cs" />
     <Compile Include="admin\index.aspx.cs">
@@ -145,6 +150,20 @@
     <Compile Include="admin\qlchuyenmuc.aspx.designer.cs">
       <DependentUpon>qlchuyenmuc.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\qldonhang.aspx.cs">
+      <DependentUpon>qldonhang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\qldonhang.aspx.designer.cs">
+      <DependentUpon>qldonhang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\qlsanpham.aspx.cs">
+      <DependentUpon>qlsanpham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\qlsanpham.aspx.designer.cs">
+      <DependentUpon>qlsanpham.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\suachuyenmuc.aspx.cs">
       <DependentUpon>suachuyenmuc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -152,12 +171,33 @@
     <Compile Include="admin\suachuyenmuc.aspx.designer.cs">
       <DependentUpon>suachuyenmuc.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\suadonhang.aspx.cs">
+      <DependentUpon>suadonhang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\suadonhang.aspx.designer.cs">
+      <DependentUpon>suadonhang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\suasanpham.aspx.cs">
+      <DependentUpon>suasanpham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\suasanpham.aspx.designer.cs">
+      <DependentUpon>suasanpham.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\themchuyenmuc.aspx.cs">
       <DependentUpon>themchuyenmuc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\themchuyenmuc.aspx.designer.cs">
       <DependentUpon>themchuyenmuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\themsanpham.aspx.cs">
+      <DependentUpon>themsanpham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\themsanpham.aspx.designer.cs">
+      <DependentUpon>themsanpham.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\ViewAdmin.Master.cs">
       <DependentUpon>ViewAdmin.Master</DependentUpon>
@@ -264,7 +304,9 @@
     <None Include="packages.config" />
     <Content Include="View.Master" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="admin\images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

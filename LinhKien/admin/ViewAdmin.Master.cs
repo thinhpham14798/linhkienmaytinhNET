@@ -11,7 +11,8 @@ namespace LinhKien.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["login"] == null)
+                Response.Redirect("login.aspx");
         }
     }
 }

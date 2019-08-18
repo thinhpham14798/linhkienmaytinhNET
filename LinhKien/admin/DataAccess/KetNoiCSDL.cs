@@ -109,7 +109,14 @@ namespace LinhKien
             DongKetNoi();
             return SoBanGhi >= 1;
         }
-
+        public bool Lenh(string sql)
+        {
+            MoKetNoi();
+            SqlCommand TruyVan = new SqlCommand(sql, KetNoi);
+            int SoBanGhi = TruyVan.ExecuteNonQuery();
+            DongKetNoi();
+            return SoBanGhi >= 1;
+        }
         //Hàm xóa Nhiều Lớp với một danh sách tham số truyền vào
         public bool Xoa(List<string> DanhSach, string TenBang, string Khoa)
         {

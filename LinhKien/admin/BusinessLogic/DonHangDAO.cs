@@ -42,10 +42,30 @@ namespace LinhKien
             sqldata.InsertParameters.Add("MaDH", maDH);
             sqldata.InsertParameters.Add("MaSP", maSP);
             sqldata.InsertParameters.Add("SL", sl);
-
+            
             try
             {
                 sqldata.Insert();
+                string sql= "update SanPham set SLCon=SLCon-"+sl+", SLBan=SLBan+"+sl+" where MaSanPham="+maSP;
+                chuoiketnoi.Xoa(sql);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool XoaDH(string id)
+        {
+            SqlDataSource sqldata = new SqlDataSource();
+            KetNoiCSDL chuoiketnoi = new KetNoiCSDL();
+            sqldata.ConnectionString = chuoiketnoi.GetSetChuoiKetNoi;
+            sqldata.DeleteCommandType = SqlDataSourceCommandType.StoredProcedure;
+            sqldata.DeleteCommand = "DonHang_Delete";
+            sqldata.DeleteParameters.Add("MaDH", id);
+            try
+            {
+                sqldata.Delete();
                 return true;
             }
             catch

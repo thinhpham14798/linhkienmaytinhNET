@@ -61,6 +61,7 @@ namespace LinhKien
                             DAO.ThemHang(maDH, idSP, SoLuong);
 
                         }
+                        
                         Session["GioHang"] = null;
                         Response.Write("Đặt hàng thành công!!!!");
                     }

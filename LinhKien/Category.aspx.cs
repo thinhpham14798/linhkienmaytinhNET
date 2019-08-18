@@ -22,7 +22,7 @@ namespace LinhKien
         public void LoadDuLieu()
         {
             KetNoiCSDL ketNoi = new KetNoiCSDL();
-            DataTable dt = ketNoi.ThucThiLenhTraVeBang("Select * from SanPham where MaDanhMuc="+ Request.QueryString["id"].ToString());
+            DataTable dt = ketNoi.ThucThiLenhTraVeBang("Select MaSanPham,TenSanPham,HinhAnh,SUBSTRING(MoTa, 0, 56)+'...' as MoTa,Gia, SLCon,SLBan,NgayBan from SanPham where MaDanhMuc=" + Request.QueryString["id"].ToString());
             dataSanPham.DataSource = dt;
             dataSanPham.DataBind();
         }
